@@ -1,16 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import Header from './components/header'
+import Banner from './components/banner'
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Olá Mundo!</h1>
-        <a>NAO REAJA APENAS NAO REAJA</a>
+      <Header></Header>
+      <Banner>
 
-      </header>
-
+      </Banner>
     </div>
   );
 }

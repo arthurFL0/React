@@ -1,0 +1,10 @@
+div.banner{
+    background-image: url("casinofoto.jpg");
+    height: calc(100vh - 81px);
+    
+}
+
+div.banner iframe{
+    width: 100%;
+    height: calc(100vh - 81px);
+}
