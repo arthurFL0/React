@@ -3,18 +3,46 @@ import ClassComponent from '../container/ClassComponent.jsx'
 import FunctionComponent from '../container/FunctionComponent.jsx'
 
 function App() {
+
+const info = [
+  {
+    nome: 'Nicolas',
+    estaNaLista: true,
+    tarefa: 'batata-frita'
+  },
+  {
+    nome: 'Pedro',
+    estaNaLista: false,
+    tarefa: 'pizza'
+  },
+  {
+    nome: 'Carolina',
+    estaNaLista: true,
+    tarefa: 'bebidas'
+  }
+]
+
+
+
   return (
     <div className="App">
       <p>Hello React</p>
       <h3>Convidados:</h3>
-      <ClassComponent nome="Nicolas" estaNaLista={true} />
-      <ClassComponent nome="Pedro" estaNaLista={false} />
-      <ClassComponent nome="Carolina" estaNaLista={true} />
+      <ul>
+      {
+        info.map((el,index) => {
+          return <ClassComponent key={index} nome={el.nome} estaNaLista={el.estaNaLista} />
+        })
+      }
+      </ul>
       <h3>Tarefa: </h3>
-      <FunctionComponent nome="Nicolas" tarefa="batata-frita" />
-      <FunctionComponent nome="Pedro" tarefa="pizza" />
-      <FunctionComponent nome="Carolina" tarefa="bebidas" />
-          
+      <ul>
+      {
+        info.map((el,index) => {
+          return <FunctionComponent key={index} nome={el.nome} tarefa={el.tarefa} />
+        })
+      }
+      </ul>     
     </div>
   );
 }
