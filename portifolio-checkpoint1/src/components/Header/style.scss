@@ -1,0 +1,44 @@
+.container #banner-container{
+    .d-flex{
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.item-holder{
+    gap:5px;
+    li{
+        display: flex;
+        align-items: center;
+    }
+    li.item-li{
+        padding-top: 0.5rem;
+    }
+
+    a{
+        padding:unset;
+    }
+    .main-item{
+    font-size: 1.25rem;
+    font-weight: bold;
+    }
+   
+    
+}
+
+
+@media only screen and (max-width: 743px){
+
+    .item-holder {
+    
+        li.main-li{
+        justify-content: center;
+        order: -1;
+        width: 100%;
+        }
+    
+        .main-item{
+            font-size: 1.35rem;
+        }
+    }
+}

@@ -1,0 +1,85 @@
+
+
+#banner-gradiente{
+    background: rgb(71,185,160);
+    background: linear-gradient(15deg, rgba(71,185,160,1) 0%, rgba(110,172,231,1) 100%);
+}
+
+
+
+h3{
+    color:white;
+    font-size: 2.5rem;
+}
+
+.section-eu{
+    
+    gap: 1rem;
+    h2{
+        font-size: 1.55rem;
+        text-align: center;
+    }
+
+    .one-container{
+        justify-content: center;
+        .foto-container{
+            align-items: center;
+            justify-content: center;
+
+            .contato-holder{
+                display: flex;
+                justify-content: center;
+                gap:1em;
+            }
+
+            img.foto {
+            width:15.4rem;
+            object-fit: cover;
+            border-radius: 118px;     
+            }
+
+            img.link-icon{
+                width: 2.7rem;
+            }
+
+        }
+    }
+}
+
+p.lead{
+
+    color:white;
+    font-size: 1.15rem;
+
+    
+}
+
+
+.arrow-img{
+    width:3.5rem;
+    transition: all .2s ease-in-out;
+}    
+.arrow-img:hover{
+    transform: scale(1.1); 
+    }
+
+@media only screen and (max-width: 521px){
+    .bannermain-holder{
+        padding: 0px 6.2rem;
+        @media only screen and (max-width: 457px){
+            padding: 0px 4rem;
+        }
+        @media only screen and (max-width: 377px){
+            padding: 0px 3rem;
+        }
+        @media only screen and (max-width: 340px){
+            padding: 0px 2rem;
+        }
+    }
+}
+
+@media only screen and (max-width: 1400px){
+    .foto-container{
+        gap: 25px;
+    }
+}

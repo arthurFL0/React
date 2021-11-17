@@ -1,5 +1,6 @@
 import '../styles/App.css';
 import ClassComponent from '../container/ClassComponent.jsx'
+import Contador from '../container/Contador.jsx'
 import FunctionComponent from '../container/FunctionComponent.jsx'
 
 function App() {
@@ -42,7 +43,8 @@ const info = [
           return <FunctionComponent key={index} nome={el.nome} tarefa={el.tarefa} />
         })
       }
-      </ul>     
+      </ul>
+      <Contador></Contador>     
     </div>
   );
 }
