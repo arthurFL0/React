@@ -16,6 +16,9 @@ export default class App extends Component {
 
   handleSubmit = async ({ cepInserido }) => {
     if (cepInserido !== '') {
+      if(cepInserido.includes("-")){
+        cepInserido = cepInserido.replace("-","")
+      }
       try {
         const response = await api.get(`/${cepInserido}/json`);
         console.log(response.data)
@@ -30,6 +33,8 @@ export default class App extends Component {
           text: error.response.data.message
         });
       }
+
+      
     }
   }
 
