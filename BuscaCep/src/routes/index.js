@@ -5,7 +5,7 @@ import BrasilApi from '../pages/BrasilApi'
 const RouteList = () => (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="/BrasilApi" element={<BrasilApi/>} />
       </Routes>
     </BrowserRouter>
