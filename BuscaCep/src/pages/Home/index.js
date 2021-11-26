@@ -11,8 +11,7 @@ export default class App extends Component {
         cepList: [],
       }
     }
-  
-   
+
   
     handleSubmit = async ({ cepInserido }) => {
       if (cepInserido !== '') {
@@ -58,17 +57,21 @@ export default class App extends Component {
                   <th>Logradouro</th>
                   <th>Cidade</th>
                   <th>Estado</th>
+                  <th>DDD</th>
                 </tr>
               </thead>
               <tbody>  
                 {this.state.cepList && (
-                  this.state.cepList.map(({logradouro,localidade,uf},index)=>{
+                  this.state.cepList.map(({cep,logradouro,localidade,uf,ddd},index)=>{
                     return(
                       <tr key={index}>
                           <th scope="row">{index+1}</th>
                           <td>{logradouro}</td>
                           <td>{localidade}</td>
                           <td>{uf}</td>
+                          <Link to={`/${cep}/${ddd}`}>
+                          <td>{ddd}</td>
+                          </Link>
                       </tr>  
                     )
                   })
