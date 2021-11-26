@@ -7,7 +7,7 @@ import BuscaDDD from '../pages/BuscaDDD';
 const RouteList = () => (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route exact path="/" element={<Home />} />
         <Route path="/BrasilApi" element={<BrasilApi/>} />
         <Route path="/:cep/:ddd" element={<BuscaDDD/>} />
       </Routes>
